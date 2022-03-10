@@ -8,20 +8,17 @@
 #
 
 library(shiny)
+library(shinydashboard)
 library(quantmod)
-library(shinythemes)
 
 
-# Define UI for application that draws a histogram
-ui = basicPage(
-  h1("Shiny Stock App"),
-  textInput("stocks", "pick stock", "TSLA"),   
-  dateRangeInput("date", "date range ", start = "2013-01-01", end = "2021-12-15",min = "2007-01-01", max = "2021-12-15",format = "yyyy-mm-dd" ),
-  checkboxInput(inputId = "log", label = "log y axis", value = FALSE),
-  plotOutput("plot"),
-  themeSelector()
-)# UI
-
-
-
-shinyApp(ui = ui, server = server) # Launch App
+ui <- dashboardPage(
+  dashboardHeader(title = "Shiny Stock App"),
+  dashboardSidebar(),
+  dashboardBody(
+    box(textInput("stocks", "Select a Stock", "TSLA"),width = 10),
+    box(dateRangeInput("date", "date range ", start = "2013-01-01", end = "2021-12-15",min = "2007-01-01", max = "2021-12-15",format = "yyyy-mm-dd" ),width = 5),
+    box(checkboxInput(inputId = "log", label = "log y axis", value = FALSE),width = 5),
+    box(plotOutput("plot"),width = 10))
+  
+)
