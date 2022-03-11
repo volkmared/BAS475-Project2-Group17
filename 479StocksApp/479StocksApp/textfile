@@ -1,0 +1,7 @@
+BAS 475
+Project 2
+Group17 
+3/11/2022
+
+  This is the shiny app created by Group 17 for Project 2 in Business Analytics 475 - Time Series. This app was created in collaboration with Adam Richmond, Myles Terry, Sarah Libman and Peyton Wells. The goal in creating this app is to provide the user with a way to monitor a publicly traded stock of their choosing. We have also added features that allow a user to change several metrics within the app. Once our shiny app is run the user is able to enter a stock of their choosing in the box at the top of the screen, the user is then able to specify what date range they are interested in viewing, we've also added a check box where the user can specify if they would like the values in the y-axis to be converted to log values. This allows you to change the parameters of the y-axis to view the time series a bit closer. 
+    We believe that this app will be helpful for anyone from the average day trader, to a serious stock broker. When investing, it is important to understand trends, cyclical tendencies, and seasonality in order to be fully vested in the investments you make and our app can provide a platform for someone to examine all of those qualities. 
