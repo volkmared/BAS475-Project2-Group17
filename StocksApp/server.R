@@ -5,7 +5,7 @@ server <- function(input, output,session){
                        to = input$date[2],
                        auto.assign = FALSE   
     )
-    chartSeries(data, theme = chartTheme('white',up.col='blue',dn.col='red'),
+    chartSeries(data, theme = chartTheme('white',up.col='orange',dn.col='gray'),
                 type = "line", log.scale = input$log, TA = NULL)
     
   })
