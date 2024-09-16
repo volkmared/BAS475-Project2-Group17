@@ -14,9 +14,12 @@ server <- function(input, output,session){
                        to = input$date[2],
                        auto.assign = FALSE   
     )
-    chartSeries(data, theme = chartTheme('white',up.col='blue',dn.col='red'),
+    chartSeries(data, theme = chartTheme(input$Id004),
                 type = "line", log.scale = input$log, TA = NULL)
     
   })
 }
-shinyApp(ui, server)
+
+
+
+
